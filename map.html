@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Верстка «stomotology»</title>
+</head>
+
+<body>
+	<div class="rootpage">
+		<h1>Верстка «stomotology»</h1>
+		<div class="rootpage__info">
+			Особенности проекта
+		</div>
+		<h2 class="rootpage__title">Готовые страницы:</h2>
+		<ol class="rootpage__list">
+			<li><a target="_blank" href="index.html">Страница услуги</a></li>
+			<li><a target="_blank" href="case.html">Страница кейса</a></li>
+		</ol>
+		<!-- <h2 class="rootpage__title">Попапы:</h2>
+		<ol class="rootpage__list">
+			<li><a target="_blank" href="index.html#"></a></li>
+		</ol> -->
+		<div class="rootpage__tnx">
+			<h2>Спасибо за заказ!</h2>
+			<p>Буду рад хорошему отзыву.</p>
+			<p>Обращайтесь еще!</p>
+		</div>
+		<div class="rootpage__contacts">
+			<h2>Мои контакты:</h2>
+			<p>Почта: <a href="mailto:thetigran21@gmail.com">thetigran21@gmail.com</a></p>
+			<p>Телефон: <a href="tel:89957895924">8 995 789 5924</a></p>
+			<p>Соц. сети: <a href="https://t.me/Tigran1963">Telegram</a>, <a href="https://wa.me/79957895924">WhatsApp</a>
+			</p>
+		</div>
+	</div>
+</body>
+<style>
+	@charset "UTF-8";
+	@import url('https://fonts.googleapis.com/css?family=Exo 2:regular,700&display=swap');
+
+	*,
+	*::before,
+	*::after {
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+		box-sizing: border-box;
+	}
+
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		min-width: 320px;
+		width: 100%;
+		color: #5D5D5D;
+		background: #FDF9EF;
+	}
+
+	body {
+		font-family: 'Exo 2';
+		font-size: 100%;
+		line-height: 1;
+		font-size: 1rem;
+	}
+
+	a {
+		text-decoration: underline;
+		color: #E3B444
+	}
+
+	a:visited {
+		text-decoration: underline;
+		color: #c69c3b;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	ul li {
+		list-style: none;
+	}
+
+	img {
+		vertical-align: top;
+	}
+
+	.wrapper {
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+	}
+
+	.rootpage {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+
+	@media (max-width: 767px) {
+		.rootpage {
+			padding: 30px 15px;
+		}
+	}
+
+	h1 {
+		color: #E3B444;
+		font-size: 2.5rem;
+		margin: 0px 0px 1.25rem 0px;
+		line-height: 1.2;
+	}
+
+	@media (max-width: 767px) {
+		h1 {
+			font-size: 1.85rem;
+			margin: 0px 0px 1.25rem 0px;
+		}
+	}
+
+	h2 {
+		color: #5D5D5D;
+		font-size: 1.25rem;
+		margin: 0px 0px 1rem 0px;
+	}
+
+	@media (max-width: 767px) {
+		h2 {
+			font-size: 1.125rem;
+			margin: 0px 0px 1rem 0px;
+		}
+	}
+
+	.rootpage__title {
+		background-color: #fff;
+		border-radius: 10px;
+		padding: 8px 10px 10px;
+		border: 1px solid #DCD6CA;
+	}
+
+	.rootpage__info {
+		line-height: 140%;
+		margin: 0px 0px 1.5rem 0px;
+	}
+
+	.rootpage__list {
+		margin: 0px 0px 2.25rem 1.25rem;
+	}
+
+	.rootpage__list li:not(:last-child) {
+		margin: 0px 0px 15px 0px;
+	}
+
+	.rootpage__contacts,
+	.rootpage__tnx {
+		border-radius: 200px;
+		padding: 20px 65px;
+		line-height: 140%;
+		width: 382px;
+	}
+
+	@media (max-width: 767px) {
+
+		.rootpage__contacts,
+		.rootpage__tnx {
+			border-radius: 40px;
+			padding: 20px;
+			width: 360px;
+		}
+	}
+
+	@media (max-width: 480px) {
+
+		.rootpage__contacts,
+		.rootpage__tnx {
+			border-radius: 30px;
+			padding: 20px;
+			width: 300px;
+		}
+	}
+
+	.rootpage__contacts {
+		background: #fff;
+		border: 1px solid #DCD6CA;
+	}
+
+	.rootpage__contacts a {
+		color: #E3B444;
+	}
+
+	.rootpage__tnx {
+		background: #fff;
+		border: 1px solid #DCD6CA;
+		margin: 0px 0px 1rem 0px;
+	}
+</style>
+
+</html>
