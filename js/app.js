@@ -4140,6 +4140,40 @@
             if (e.target.classList.contains("open")) e.target.textContent = "Скрыть"; else e.target.textContent = "Читать далее";
         }));
     }));
+    const serviceAboutBtnPrev = document.querySelector(".service-about .service-about__tabs-button-prev");
+    const serviceAboutBtnNext = document.querySelector(".service-about .service-about__tabs-button-next");
+    const whyWeBtnPrev = document.querySelector(".why-we .service-about__tabs-button-prev");
+    const whyWeBtnNext = document.querySelector(".why-we .service-about__tabs-button-next");
+    const tabsNavigation1 = document.querySelector(".tabs__navigation_1");
+    const tabsNavigation2 = document.querySelector(".tabs__navigation_2");
+    if (serviceAboutBtnPrev) serviceAboutBtnPrev.addEventListener("click", (function(e) {
+        tabsNavigation1.scrollBy({
+            top: 0,
+            left: -350,
+            behavior: "smooth"
+        });
+    }));
+    if (serviceAboutBtnNext) serviceAboutBtnNext.addEventListener("click", (function(e) {
+        tabsNavigation1.scrollBy({
+            top: 0,
+            left: 300,
+            behavior: "smooth"
+        });
+    }));
+    if (whyWeBtnPrev) whyWeBtnPrev.addEventListener("click", (function(e) {
+        tabsNavigation2.scrollBy({
+            top: 0,
+            left: -350,
+            behavior: "smooth"
+        });
+    }));
+    if (whyWeBtnNext) whyWeBtnNext.addEventListener("click", (function(e) {
+        tabsNavigation2.scrollBy({
+            top: 0,
+            left: 300,
+            behavior: "smooth"
+        });
+    }));
     window["FLS"] = false;
     isWebp();
     spollers();
