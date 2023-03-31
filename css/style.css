@@ -428,6 +428,7 @@ body::after {
 }
 
 .tabs__title {
+  display: inline-block;
   white-space: nowrap;
   font-family: "Literaturnaya";
   font-weight: 700;
@@ -1252,6 +1253,10 @@ body::after {
 
 .service-about__title {
   margin-bottom: 2.5rem;
+}
+
+.no-scroll .service-about__tabs-buttons {
+  display: none;
 }
 
 .service-about__tabs-buttons button {
