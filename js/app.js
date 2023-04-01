@@ -14,6 +14,26 @@
             document.documentElement.classList.add(className);
         }));
     }
+    let isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+        }
+    };
     function functions_getHash() {
         if (location.hash) return location.hash.replace("#", "");
     }
@@ -4302,9 +4322,31 @@
     const whyWeBtnNext = document.querySelector(".why-we .service-about__tabs-button-next");
     const tabsNavigation1 = document.querySelector(".tabs__navigation_1");
     const tabsNavigation2 = document.querySelector(".tabs__navigation_2");
+    const tabsNavigationTitles1 = document.querySelectorAll(".tabs__navigation_1 .tabs__title");
+    const tabsNavigationTitles2 = document.querySelectorAll(".tabs__navigation_2 .tabs__title");
     window.addEventListener("load", (function() {
         if (tabsNavigation1) if (tabsNavigation1.offsetHeight <= 81) tabsNavigation1.closest(".service-about__container").classList.add("no-scroll"); else tabsNavigation1.closest(".service-about__container").classList.remove("no-scroll");
         if (tabsNavigation2) if (tabsNavigation2.offsetHeight <= 81) tabsNavigation2.closest(".why-we__container").classList.add("no-scroll"); else tabsNavigation2.closest(".why-we__container").classList.remove("no-scroll");
+        if (isMobile.any()) {
+            if (tabsNavigationTitles1.length > 0) {
+                let count = 0;
+                tabsNavigationTitles1.forEach((title => {
+                    count += title.clientWidth + 8;
+                    console.log("1", count, title.clientWidth);
+                }));
+                console.log("1", count, tabsNavigation1.clientWidth);
+                if (count < tabsNavigation1.clientWidth) tabsNavigation1.closest(".service-about__container").classList.add("no-scroll"); else tabsNavigation1.closest(".service-about__container").classList.remove("no-scroll");
+            }
+            if (tabsNavigationTitles2.length > 0) {
+                let count = 0;
+                tabsNavigationTitles2.forEach((title => {
+                    count += title.clientWidth + 8;
+                    console.log("2", count, title.clientWidth);
+                }));
+                console.log("2", count, tabsNavigation2.clientWidth);
+                if (count < tabsNavigation2.clientWidth) tabsNavigation2.closest(".why-we__container").classList.add("no-scroll"); else tabsNavigation2.closest(".why-we__container").classList.remove("no-scroll");
+            }
+        }
     }));
     if (serviceAboutBtnPrev) serviceAboutBtnPrev.addEventListener("click", (function(e) {
         tabsNavigation1.scrollBy({

@@ -1602,6 +1602,10 @@ body::after {
   position: relative;
 }
 
+.why-we .service-about__tabs-buttons button {
+  top: 133px;
+}
+
 .why-we__title {
   text-align: center;
   margin-bottom: 2.5rem;
@@ -1915,6 +1919,10 @@ body::after {
   .service-about__tabs-button-next {
     right: 15px;
   }
+
+  .why-we .service-about__tabs-buttons button {
+    top: 70px;
+  }
 }
 
 @media (max-width: 81.875em) {
@@ -2040,6 +2048,10 @@ body::after {
     top: 26.5%;
     opacity: 0.5;
     border: 10px solid #e3b444;
+  }
+
+  .why-we .service-about__tabs-buttons button {
+    top: 55px;
   }
 }
 
@@ -2236,8 +2248,12 @@ body::after {
     margin-bottom: 5rem;
   }
 
-  .why-we__title {
+  .why-we__container.no-scroll .why-we__title {
     margin-bottom: 1.5rem;
+  }
+
+  .why-we__title {
+    margin-bottom: 3.125rem;
   }
 
   .why-we__icon img {
@@ -2663,6 +2679,10 @@ body::after {
   .why-we {
     padding-top: 4rem;
     margin-bottom: 4rem;
+  }
+
+  .why-we .service-about__tabs-buttons button {
+    top: 33px;
   }
 
   .why-we__item {
